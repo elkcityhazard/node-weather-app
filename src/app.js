@@ -53,7 +53,6 @@ app.get('/weather', (req, res, next) => {
             error: 'please enter a valid address',
         })
     }
-    console.log(req.query.address)
     geoCode(req.query.address, (err, {latitude, longitude, location} = {}) => {
         if(err) {
             return res.send(err);
