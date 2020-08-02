@@ -67,17 +67,17 @@ app.get('/weather', (req, res, next) => {
     });
 })
 
-app.get('/products', (req, res, next) => {
-    if (!req.query.search) {
-        return res.send({
-            error: 'You must provide a search term',
-        })
-    }
-    console.log(req.query);
-    res.send({
-        products: [],
-    })
-})
+// app.get('/products', (req, res, next) => {
+//     if (!req.query.search) {
+//         return res.send({
+//             error: 'You must provide a search term',
+//         })
+//     }
+//     console.log(req.query);
+//     res.send({
+//         products: [],
+//     })
+// })
 
 app.get('/help/*', errorController.helpError);
 
