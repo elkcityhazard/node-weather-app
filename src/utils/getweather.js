@@ -16,6 +16,8 @@ const getWeather = (latitude, longitude, callback) => {
                  temperature: body.current.temperature,
                  precipitation: body.current.precip,
                  feelsLike: body.current.feelslike,
+                 windSpeed: body.current.wind_speed,
+                 windDir: body.current.wind_dir,
     }
 callback(undefined, data);
 }})};
