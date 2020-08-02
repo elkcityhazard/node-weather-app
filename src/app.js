@@ -2,6 +2,7 @@ const path = require('path');
 const express = require('express');
 const hbs = require('hbs');
 const app = express();
+const port = process.env.PORT || 3000;
 const geoCode = require('./utils/geocode');
 const getWeather = require('./utils/getweather');
 const views = path.join(__dirname, '../templates/views');
@@ -82,6 +83,6 @@ app.get('/weather', (req, res, next) => {
 app.get('/help/*', errorController.helpError);
 
 
-app.listen(3000, () => {
-    console.log('server listening on 3000')
+app.listen(port, () => {
+    console.log('server listening on port')
 });
