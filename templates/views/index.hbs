@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="shortcut icon" href="/public/images/weather.png" type="image/x-icon">
+</head>
+<body>
+    <div class="main-content">
+{{> header}}
+<p>Get Your Weather Here!</p>
+<form action="">
+    <input type="text" placeholder="Type Address Here">
+    <button>Search</button>
+</form>
+{{> weather }}
+    </div>
+    {{> footer}}
+    <script src="/public/js/app.js"></script>
+</body>
+</html>
